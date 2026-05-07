@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Page not found — Stackly" />
+  <meta name="robots" content="noindex" />
+  <title>404 — Page Not Found | Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="404.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header scrolled" role="banner">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Back to Stackly Home">
+        <svg class="logo-icon" width="36" height="36" viewBox="0 0 56 56" fill="none">
+          <path d="M14 42C14 42 10 36 10 28C10 16.954 18.954 8 30 8C36 8 42 11 46 16" stroke="#5CC8B0"
+            stroke-width="3.5" stroke-linecap="round" />
+          <path d="M20 14C20 14 16 20 16 28C16 35.732 22.268 42 30 42C36 42 41 38 43 32" stroke="#5CC8B0"
+            stroke-width="3.5" stroke-linecap="round" opacity="0.65" />
+          <circle cx="30" cy="28" r="6" fill="#5CC8B0" />
+        </svg>
+        <span class="logo-text">STACKLY</span>
+      </a>
+      <a href="index.html" class="btn btn--sm btn--outline" id="header-home-link">Go Home</a>
+    </div>
+  </header>
+
+  <!-- 404 Content -->
+  <main>
+    <div class="page-404" role="main" aria-labelledby="error-heading">
+      <div class="page-404__bg-glow" aria-hidden="true"></div>
+
+      <svg width="160" height="160" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <!-- Body -->
+        <rect x="55" y="90" width="90" height="70" rx="18" fill="#1A3A5C" stroke="#5CC8B0" stroke-width="2" />
+        <!-- Head -->
+        <rect x="65" y="45" width="70" height="55" rx="14" fill="#1A3A5C" stroke="#5CC8B0" stroke-width="2" />
+        <!-- Eyes -->
+        <circle cx="85" cy="68" r="9" fill="#0D2137" />
+        <circle cx="115" cy="68" r="9" fill="#0D2137" />
+        <circle cx="85" cy="68" r="5" fill="#5CC8B0" id="eye-left" />
+        <circle cx="115" cy="68" r="5" fill="#5CC8B0" id="eye-right" />
+        <!-- Mouth -->
+        <path d="M86 82 Q100 76 114 82" stroke="#5CC8B0" stroke-width="2" stroke-linecap="round" fill="none" />
+        <!-- Antenna -->
+        <line x1="100" y1="45" x2="100" y2="28" stroke="#5CC8B0" stroke-width="2.5" stroke-linecap="round" />
+        <circle cx="100" cy="24" r="5" fill="#5CC8B0" />
+        <!-- Arms -->
+        <rect x="22" y="100" width="33" height="16" rx="8" fill="#1A3A5C" stroke="#5CC8B0" stroke-width="2" />
+        <rect x="145" y="100" width="33" height="16" rx="8" fill="#1A3A5C" stroke="#5CC8B0" stroke-width="2" />
+        <!-- Legs -->
+        <rect x="68" y="155" width="22" height="28" rx="8" fill="#1A3A5C" stroke="#5CC8B0" stroke-width="2" />
+        <rect x="110" y="155" width="22" height="28" rx="8" fill="#1A3A5C" stroke="#5CC8B0" stroke-width="2" />
+        <!-- Chest panel -->
+        <rect x="75" y="103" width="50" height="30" rx="6" fill="#0D2137" stroke="rgba(92,200,176,.3)"
+          stroke-width="1" />
+        <circle cx="88" cy="118" r="4" fill="#5CC8B0" opacity="0.7" />
+        <circle cx="100" cy="118" r="4" fill="rgba(92,200,176,0.4)" />
+        <circle cx="112" cy="118" r="4" fill="rgba(92,200,176,0.2)" />
+      </svg>
+
+      <div class="page-404__code" id="error-heading" aria-label="Error 404">404</div>
+      <h1 class="page-404__title">Lost in the Stack</h1>
+      <p class="page-404__subtitle">Looks like this page drifted off into the void. Our robot tried to find it — no
+        luck.</p>
+
+      <div class="page-404__actions">
+        <a href="index.html" class="btn btn--primary btn--lg" id="error-home-btn">← Back to Home</a>
+        <a href="index.html#contact" class="btn btn--ghost btn--lg" id="error-contact-btn">Contact Support</a>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    @keyframes floatUpDown {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-16px);
+      }
+    }
+
+    #eye-left,
+    #eye-right {
+      transform-origin: center;
+      animation: eyeBlink 3s 2s ease-in-out infinite;
+    }
+
+    @keyframes eyeBlink {
+
+      0%,
+      94%,
+      100% {
+        transform: scaleY(1);
+      }
+
+      96% {
+        transform: scaleY(0.1);
+      }
+    }
+  </style>
+
+</body>
+
+</html>

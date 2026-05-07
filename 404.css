@@ -1,0 +1,84 @@
+.page-404 {
+
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 64px 24px 24px;
+  background: radial-gradient(ellipse at center, #1A3A5C 0%, #0D2137 65%);
+  overflow-y: auto;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* Robot SVG — scale down on mobile so everything fits */
+.page-404>svg {
+  width: clamp(90px, 28vw, 160px);
+  height: clamp(90px, 28vw, 160px);
+  margin-bottom: clamp(8px, 2vw, 20px);
+}
+
+.page-404__code {
+  font-family: 'Outfit', sans-serif;
+  /* Smaller on mobile so the whole page fits without scroll */
+  font-size: clamp(4.5rem, 18vw, 11rem);
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, #5CC8B0, rgba(92, 200, 176, .3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: clamp(6px, 1.5vw, 14px);
+}
+
+.page-404__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.1rem, 3.5vw, 2rem);
+  font-weight: 700;
+  color: #E8F0F8;
+  margin-bottom: clamp(6px, 1.5vw, 14px);
+}
+
+.page-404__subtitle {
+  color: #8AAABB;
+  max-width: 400px;
+  margin: 0 auto clamp(16px, 4vw, 32px);
+  font-size: clamp(0.82rem, 2vw, 1rem);
+  line-height: 1.5;
+}
+
+.page-404__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Smaller buttons on mobile so they don't overflow */
+@media (max-width: 480px) {
+  .page-404__actions .btn--lg {
+    padding: 12px 22px;
+    font-size: 0.9rem;
+  }
+}
+
+.page-404__bg-glow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(92, 200, 176, .12), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-404>* {
+  position: relative;
+  z-index: 1;
+}

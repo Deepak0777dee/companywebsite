@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stackly — Build faster, scale smarter. Enterprise-grade cloud infrastructure, AI-powered development tools, and security solutions for modern teams." />
+  <meta name="keywords" content="Stackly, cloud infrastructure, software development, AI analytics, cybersecurity, tech solutions" />
+  <meta name="theme-color" content="#0D2137" />
+  <title>Stackly — Build Faster. Scale Smarter.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader" class="loader" role="status" aria-label="Loading Stackly">
+    <div class="loader__inner">
+      <div class="loader__logo">
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 42C14 42 10 36 10 28C10 16.954 18.954 8 30 8C36 8 42 11 46 16" stroke="#5CC8B0" stroke-width="3" stroke-linecap="round"/>
+          <path d="M20 14C20 14 16 20 16 28C16 35.732 22.268 42 30 42C36 42 41 38 43 32" stroke="#5CC8B0" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+          <circle cx="30" cy="28" r="6" fill="#5CC8B0"/>
+        </svg>
+      </div>
+      <div class="loader__bar"><div class="loader__progress"></div></div>
+      <p class="loader__text">Initializing Stackly…</p>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header" class="header" role="banner">
+    <div class="container header__inner">
+      <a href="#home" class="header__logo" aria-label="Stackly Home">
+        <svg class="logo-icon" width="36" height="36" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 42C14 42 10 36 10 28C10 16.954 18.954 8 30 8C36 8 42 11 46 16" stroke="#5CC8B0" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M20 14C20 14 16 20 16 28C16 35.732 22.268 42 30 42C36 42 41 38 43 32" stroke="#5CC8B0" stroke-width="3.5" stroke-linecap="round" opacity="0.65"/>
+          <circle cx="30" cy="28" r="6" fill="#5CC8B0"/>
+        </svg>
+        <span class="logo-text">STACKLY</span>
+      </a>
+
+      <nav class="header__nav" id="nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="#home"     class="nav__link" id="nav-home">Home</a></li>
+          <li><a href="#services" class="nav__link" id="nav-services">Services</a></li>
+          <li><a href="#about"    class="nav__link" id="nav-about">About</a></li>
+          <li><a href="#stats"    class="nav__link" id="nav-stats">Impact</a></li>
+          <li><a href="#contact"  class="nav__link" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#contact" class="btn btn--sm btn--outline" id="header-cta">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV OVERLAY ===== -->
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <button class="mobile-nav__close" id="mobileNavClose" aria-label="Close menu">✕</button>
+    <ul class="mobile-nav__list">
+      <li><a href="#home"     class="mobile-nav__link" id="mnav-home">Home</a></li>
+      <li><a href="#services" class="mobile-nav__link" id="mnav-services">Services</a></li>
+      <li><a href="#about"    class="mobile-nav__link" id="mnav-about">About</a></li>
+      <li><a href="#stats"    class="mobile-nav__link" id="mnav-stats">Impact</a></li>
+      <li><a href="#contact"  class="mobile-nav__link" id="mnav-contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn--primary mobile-nav__cta" id="mnav-cta">Get Started Free</a>
+  </div>
+  <div class="mobile-nav__backdrop" id="mobileNavBackdrop"></div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section id="home" class="hero section" aria-labelledby="hero-heading">
+      <div class="hero__bg">
+        <picture>
+          <source srcset="images/hero_bg.webp" type="image/webp" />
+          <img src="images/hero_bg.webp" alt="" role="presentation" class="hero__bg-img" loading="eager" />
+        </picture>
+        <div class="hero__bg-overlay"></div>
+      </div>
+      <div class="hero__particles" id="heroParticles" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <span class="badge-dot"></span>
+            Now with AI-Powered Automation
+          </div>
+          <h1 id="hero-heading" class="hero__title">
+            Build <span class="gradient-text">Faster.</span><br/>
+            Scale <span class="gradient-text">Smarter.</span>
+          </h1>
+          <p class="hero__subtitle">
+            Stackly delivers enterprise-grade cloud infrastructure, intelligent development tools, and next-gen security so your team ships with confidence — at any scale.
+          </p>
+          <div class="hero__actions">
+            <a href="#services" class="btn btn--primary btn--lg" id="hero-explore">Explore Solutions</a>
+            <a href="#about"    class="btn btn--ghost btn--lg"   id="hero-learn">Learn More
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="hero__trust">
+            <p class="hero__trust-label">Trusted by teams at</p>
+            <div class="hero__logos">
+              <span>Acme Corp</span>
+              <span>NovaTech</span>
+              <span>PixelForge</span>
+              <span>CloudNine</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <picture>
+            <source srcset="images/hero_dashboard.webp" type="image/webp" />
+            <img src="images/hero_dashboard.webp" alt="Stackly platform dashboard preview" class="hero__dashboard" loading="eager" />
+          </picture>
+          <div class="hero__glow" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-indicator__dot"></div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services section" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What We Do</span>
+          <h2 id="services-heading" class="section-title">Powering the Stack of Tomorrow</h2>
+          <p class="section-subtitle">From cloud to code to compliance — Stackly gives your engineering teams everything they need in one unified platform.</p>
+        </div>
+
+        <div class="services__grid">
+
+          <article class="service-card" id="service-cloud">
+            <div class="service-card__img-wrap">
+              <picture>
+                <source srcset="images/service_cloud.webp" type="image/webp" />
+                <img src="images/service_cloud.webp" alt="Cloud Infrastructure illustration" loading="lazy" />
+              </picture>
+            </div>
+            <div class="service-card__body">
+              <div class="service-card__icon">☁</div>
+              <h3 class="service-card__title">Cloud Infrastructure</h3>
+              <p class="service-card__desc">Auto-scaling, multi-region deployments with 99.99% uptime SLA. Built for enterprises who can't afford downtime.</p>
+              <a href="#contact" class="service-card__link" id="svc-cloud-cta">Learn More →</a>
+            </div>
+          </article>
+
+          <article class="service-card service-card--featured" id="service-dev">
+            <div class="service-card__img-wrap">
+              <picture>
+                <source srcset="images/service_dev.webp" type="image/webp" />
+                <img src="images/service_dev.webp" alt="Developer Tools illustration" loading="lazy" />
+              </picture>
+            </div>
+            <div class="service-card__body">
+              <div class="service-card__icon">⚡</div>
+              <h3 class="service-card__title">Dev Automation</h3>
+              <p class="service-card__desc">CI/CD pipelines, code review AI, and automated testing that cuts your release cycle from weeks to hours.</p>
+              <a href="#contact" class="service-card__link" id="svc-dev-cta">Learn More →</a>
+            </div>
+            <div class="service-card__featured-badge">Most Popular</div>
+          </article>
+
+          <article class="service-card" id="service-ai">
+            <div class="service-card__img-wrap">
+              <picture>
+                <source srcset="images/service_ai.webp" type="image/webp" />
+                <img src="images/service_ai.webp" alt="AI Analytics illustration" loading="lazy" />
+              </picture>
+            </div>
+            <div class="service-card__body">
+              <div class="service-card__icon">🧠</div>
+              <h3 class="service-card__title">AI Analytics</h3>
+              <p class="service-card__desc">Real-time intelligence on your stack's performance, anomaly detection, and predictive scaling — powered by ML.</p>
+              <a href="#contact" class="service-card__link" id="svc-ai-cta">Learn More →</a>
+            </div>
+          </article>
+
+          <article class="service-card" id="service-sec">
+            <div class="service-card__img-wrap">
+              <picture>
+                <source srcset="images/service_security.webp" type="image/webp" />
+                <img src="images/service_security.webp" alt="Security illustration" loading="lazy" />
+              </picture>
+            </div>
+            <div class="service-card__body">
+              <div class="service-card__icon">🔒</div>
+              <h3 class="service-card__title">Security & Compliance</h3>
+              <p class="service-card__desc">Zero-trust architecture, SOC 2 Type II compliance, and continuous vulnerability scanning built into every layer.</p>
+              <a href="#contact" class="service-card__link" id="svc-sec-cta">Learn More →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about section" aria-labelledby="about-heading">
+      <div class="container about__inner">
+        <div class="about__visual">
+          <picture>
+            <source srcset="images/about_team.webp" type="image/webp" />
+            <img src="images/about_team.webp" alt="Stackly engineering team collaborating on digital solutions" loading="lazy" class="about__img" />
+          </picture>
+          <div class="about__card about__card--1">
+            <span class="about__card-number">2019</span>
+            <span class="about__card-label">Founded</span>
+          </div>
+          <div class="about__card about__card--2">
+            <span class="about__card-number">150+</span>
+            <span class="about__card-label">Countries</span>
+          </div>
+        </div>
+
+        <div class="about__content">
+          <span class="section-tag">Our Story</span>
+          <h2 id="about-heading" class="section-title">We Believe in Developer-First Infrastructure</h2>
+          <p class="about__text">Stackly was born from a simple frustration — great engineering teams spending more time managing infrastructure than shipping products. We built the platform we wished existed.</p>
+          <p class="about__text">Today, Stackly powers thousands of startups and Fortune 500 companies across 150+ countries, helping them move faster without sacrificing reliability or security.</p>
+
+          <div class="about__features">
+            <div class="about__feature">
+              <div class="about__feature-icon">✓</div>
+              <div>
+                <strong>Developer Experience First</strong>
+                <p>Built by engineers, for engineers. Every feature is designed around DX.</p>
+              </div>
+            </div>
+            <div class="about__feature">
+              <div class="about__feature-icon">✓</div>
+              <div>
+                <strong>Transparent Pricing</strong>
+                <p>No hidden fees. Scale up or down with usage-based billing.</p>
+              </div>
+            </div>
+            <div class="about__feature">
+              <div class="about__feature-icon">✓</div>
+              <div>
+                <strong>24/7 Human Support</strong>
+                <p>Real engineers on call, not bots. Your uptime is our priority.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn--primary" id="about-cta">Work With Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats" class="stats section" aria-labelledby="stats-heading">
+      <div class="stats__bg">
+        <picture>
+          <source srcset="images/cta_bg.webp" type="image/webp" />
+          <img src="images/cta_bg.webp" alt="" role="presentation" loading="lazy" />
+        </picture>
+        <div class="stats__overlay"></div>
+      </div>
+      <div class="container">
+        <div class="section-header section-header--light">
+          <span class="section-tag">By the Numbers</span>
+          <h2 id="stats-heading" class="section-title">Our Global Impact</h2>
+        </div>
+        <div class="stats__grid">
+          <div class="stat-item" id="stat-clients">
+            <span class="stat-item__number" data-target="12000">0</span><span class="stat-item__suffix">+</span>
+            <p class="stat-item__label">Clients Worldwide</p>
+          </div>
+          <div class="stat-item" id="stat-uptime">
+            <span class="stat-item__number" data-target="99">0</span><span class="stat-item__suffix">.99%</span>
+            <p class="stat-item__label">Uptime SLA</p>
+          </div>
+          <div class="stat-item" id="stat-deploys">
+            <span class="stat-item__number" data-target="5">0</span><span class="stat-item__suffix">M+</span>
+            <p class="stat-item__label">Daily Deployments</p>
+          </div>
+          <div class="stat-item" id="stat-team">
+            <span class="stat-item__number" data-target="400">0</span><span class="stat-item__suffix">+</span>
+            <p class="stat-item__label">Team Members</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="testimonials section" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What Clients Say</span>
+          <h2 id="testimonials-heading" class="section-title">Loved by Engineering Teams</h2>
+        </div>
+        <div class="testimonials__outer">
+          <div class="testimonials__track" id="testimonialsTrack" role="list">
+            <div class="testimonial-card" role="listitem">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>"Stackly cut our deployment time by 70%. What took a week now takes a morning. The AI anomaly detection alone saved us from two major incidents."</blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">SR</div>
+                <div>
+                  <strong>Sarah Rahman</strong>
+                  <span>CTO, NovaTech</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card" role="listitem">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>"The security suite is unreal. We passed our SOC 2 audit in record time. Stackly's compliance tools did 80% of the heavy lifting."</blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">JM</div>
+                <div>
+                  <strong>James Moore</strong>
+                  <span>Head of Security, CloudNine</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card" role="listitem">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>"We scaled from 10k to 2M users in 3 months without a single outage. Stackly's auto-scaling is genuinely magic. 10/10 would recommend."</blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">LP</div>
+                <div>
+                  <strong>Lena Park</strong>
+                  <span>VP Engineering, PixelForge</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials__dots" id="testimonialsDotsContainer" aria-label="Testimonial navigation" role="tablist"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section id="contact" class="contact section" aria-labelledby="contact-heading">
+      <div class="container contact__inner">
+        <div class="contact__info">
+          <span class="section-tag">Get in Touch</span>
+          <h2 id="contact-heading" class="section-title">Ready to Scale with Stackly?</h2>
+          <p class="contact__subtitle">Start your free 14-day trial — no credit card required. Our team will reach out within 24 hours.</p>
+
+          <ul class="contact__details">
+            <li>
+              <span class="contact__icon" aria-hidden="true">📧</span>
+              <a href="mailto:hello@stackly.io" id="contact-email">hello@stackly.io</a>
+            </li>
+            <li>
+              <span class="contact__icon" aria-hidden="true">📞</span>
+              <a href="tel:+18005782559" id="contact-phone">+1 800 STACKLY</a>
+            </li>
+            <li>
+              <span class="contact__icon" aria-hidden="true">📍</span>
+              <span>San Francisco, CA · London · Singapore</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate aria-label="Contact form">
+          <div class="form-group">
+            <label for="form-name">Full Name</label>
+            <input type="text" id="form-name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+            <span class="form-error" id="error-name" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="form-email">Work Email</label>
+            <input type="email" id="form-email" name="email" placeholder="jane@company.com" required autocomplete="email" />
+            <span class="form-error" id="error-email" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="form-company">Company</label>
+            <input type="text" id="form-company" name="company" placeholder="Acme Corp" autocomplete="organization" />
+          </div>
+          <div class="form-group">
+            <label for="form-message">How can we help?</label>
+            <textarea id="form-message" name="message" rows="4" placeholder="Tell us about your infrastructure challenges…" required></textarea>
+            <span class="form-error" id="error-message" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="form-submit">Send Message</button>
+          <p class="form-success" id="form-success" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <a href="#home" class="header__logo footer__logo" aria-label="Stackly Home">
+          <svg class="logo-icon" width="32" height="32" viewBox="0 0 56 56" fill="none">
+            <path d="M14 42C14 42 10 36 10 28C10 16.954 18.954 8 30 8C36 8 42 11 46 16" stroke="#5CC8B0" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M20 14C20 14 16 20 16 28C16 35.732 22.268 42 30 42C36 42 41 38 43 32" stroke="#5CC8B0" stroke-width="3.5" stroke-linecap="round" opacity="0.65"/>
+            <circle cx="30" cy="28" r="6" fill="#5CC8B0"/>
+          </svg>
+          <span class="logo-text">STACKLY</span>
+        </a>
+        <p class="footer__tagline">Build faster. Scale smarter. Ship with confidence.</p>
+        <div class="footer__socials">
+          <a href="404.html" class="footer__social" id="social-twitter"  aria-label="Stackly on Twitter">𝕏</a>
+          <a href="404.html" class="footer__social" id="social-linkedin" aria-label="Stackly on LinkedIn">in</a>
+          <a href="404.html" class="footer__social" id="social-github"   aria-label="Stackly on GitHub">⌥</a>
+        </div>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <div class="footer__col">
+          <h3 class="footer__col-title">Product</h3>
+          <ul>
+            <li><a href="#services" id="footer-cloud">Cloud Infrastructure</a></li>
+            <li><a href="#services" id="footer-dev">Dev Automation</a></li>
+            <li><a href="#services" id="footer-ai">AI Analytics</a></li>
+            <li><a href="#services" id="footer-sec">Security Suite</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Company</h3>
+          <ul>
+            <li><a href="#about"   id="footer-about">About Us</a></li>
+            <li><a href="#stats"   id="footer-impact">Our Impact</a></li>
+            <li><a href="404.html" id="footer-careers">Careers</a></li>
+            <li><a href="404.html" id="footer-press">Press</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Resources</h3>
+          <ul>
+            <li><a href="404.html" id="footer-docs">Documentation</a></li>
+            <li><a href="404.html" id="footer-blog">Blog</a></li>
+            <li><a href="404.html" id="footer-status">Status Page</a></li>
+            <li><a href="404.html" id="footer-changelog">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Legal</h3>
+          <ul>
+            <li><a href="404.html" id="footer-privacy">Privacy Policy</a></li>
+            <li><a href="404.html" id="footer-terms">Terms of Service</a></li>
+            <li><a href="404.html" id="footer-cookies">Cookie Policy</a></li>
+            <li><a href="404.html" id="footer-gdpr">GDPR</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© <span id="footer-year">2024</span> Stackly, Inc. All rights reserved.</p>
+        <p>Made with ❤ for engineers everywhere.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
